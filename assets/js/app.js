@@ -8,4 +8,7 @@
     socket.on('chat message', function(msg){
       $('#messages').append('<p><span class="newMsj">' + msg + '</span></p>');
     });
+    socket.on('user joined' , function(join){
+      $('#status').append('un usuario se unió')
+    })
   });
