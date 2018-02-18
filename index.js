@@ -5,6 +5,12 @@ var server = require('http').createServer(app);
 var io = require('../..')(server);
 var port = process.env.PORT || 3000;
 
+server.listen(port, function () {
+  console.log('Server listening at port %d', port);
+});
+
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
@@ -12,16 +18,16 @@ app.get('/', function(req, res){
 io.emit('some event', { for: 'everyone' });
 
 io.on('connection', function(socket){
-  /*console.log('a user connected');
+  console.log('a user connected');
   socket.on('disconnect', function(){
     console.log('user disconnected');
-  });*/
-    socket.on('chat message', function(msg){
+  })
+  socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
 });
 
-
 http.listen(3000, function(){
   console.log('listening on *:3000');
 });
+

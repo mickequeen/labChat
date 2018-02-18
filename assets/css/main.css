@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body {
+  background-image: url(../img/background-whatsapp-7.jpg);
+  font: 13px Helvetica, Arial
+}
+
+form {
+  position: fixed;
+  bottom: 10px;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.newMsj{
+  background-color: #8ff38ffc;
+  padding: 0.5em;
+  display: inline-block;
+  border-radius: 0.5em;
+}
+
+.form-inline{
+    width: auto ;
+  }
+
+.btn{
+  padding: 0;
+  border: none;
+}
