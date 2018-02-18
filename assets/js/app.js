@@ -12,3 +12,4 @@
       $('#status').append('un usuario se unió')
     })
   });
+
