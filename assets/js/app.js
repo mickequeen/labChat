@@ -1,5 +1,5 @@
   $(function () {
-    var socket = io('http://34.227.11.223:3000');
+    var socket = io('https://34.227.11.223:3000');
     $('form').submit(function(){
       socket.emit('chat message', $('#m').val());
       $('#m').val('');
